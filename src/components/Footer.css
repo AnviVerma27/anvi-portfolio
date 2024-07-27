@@ -1,0 +1,31 @@
+/* App.css */
+/* Keep the existing styles for body and other sections */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #61dafb;
+    transform: translateY(-3px);
+  }
+  

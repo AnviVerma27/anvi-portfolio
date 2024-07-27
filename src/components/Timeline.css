@@ -1,0 +1,50 @@
+/* Timeline.css */
+.timeline-segment {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timeline-segment:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .timeline-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+  
+  .timeline-content {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .timeline-title {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+  }
+  
+  .timeline-time {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-description {
+    line-height: 1.5;
+    display: none; /* Initially hide description */
+  }
+  
+  .timeline-segment:hover .timeline-description {
+    display: block; /* Show description on hover */
+  }
+  
+  .timeline-tags {
+    margin-top: 10px;
+  }
+  

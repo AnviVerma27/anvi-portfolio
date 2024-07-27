@@ -1,0 +1,54 @@
+/* Header.css */
+.header {
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin: 0 15px;
+    text-align: center;
+  }
+  
+  .header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .header nav ul li a:hover {
+    color: #61dafb;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

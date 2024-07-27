@@ -1,0 +1,53 @@
+/* App.css */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Introduction{
+  height: 650px;
+}
+
+.section-hidden {
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s forwards;
+}
+
+

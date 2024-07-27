@@ -1,0 +1,19 @@
+.box{
+    display: flex;    
+}
+
+.text-section {
+    margin: 40px;
+    background-color: rgb(59, 65, 144);
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+    color: white;
+    font-size:xx-large;
+    border-radius: 1%;
+    animation: fadeInDown 0.7s  ease-in;
+}
