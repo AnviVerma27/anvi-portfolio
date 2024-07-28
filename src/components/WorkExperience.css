@@ -1,64 +1,63 @@
 /* WorkExperience.css */
-.work-experience .timeline {
-    display: flex;
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  .work-experience .timeline-dot {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #61dafb;
-    border-radius: 50%;
-    z-index: 1;
-    top: 0;
-    left: -7px;
-  }
-  
-  .work-experience .timeline-dot:before {
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 100%;
-    background-color: #61dafb;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-  
-  .work-experience .timeline-content {
-    margin-left: 30px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(100% - 30px);
-    position: relative;
-  }
-  
-  .work-experience .timeline-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .work-experience .timeline-date {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .work-experience ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #333;
-  }
-  
-  .work-experience ul li {
-    margin-bottom: 8px;
-  }
-  
-  /* Additional animations can be added using keyframes or CSS libraries like animate.css */
-  
+
+.section {
+  margin: 70px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.experience-box {
+  margin: 30px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 400px; /* Fixed width for each box */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.experience-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.experience-box ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
