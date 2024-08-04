@@ -4,7 +4,7 @@
 
 .text-section {
     margin: 40px;
-    background-color: rgba(24, 33, 148, 0.897);
+    background-color: rgba(24, 33, 148);
     flex: 1;
     padding: 40px;
     display: flex;

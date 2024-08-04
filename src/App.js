@@ -8,9 +8,6 @@ import Publish from './pages/Publish';
 
 
 function App() {
-
-  
-
   return (
     <div>
     <BrowserRouter>
