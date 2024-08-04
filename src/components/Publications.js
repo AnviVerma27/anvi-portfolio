@@ -7,6 +7,7 @@ const Publications = () => {
     <section id="publications" className="publications">
       <div className="container">
         <h2>Publications</h2>
+        <hr />
         <div className="publication">
           <h3>Contextual Outliers</h3>
           <p><strong>GeeksForGeeks</strong>, Oct 27, 2023</p>
@@ -26,6 +27,11 @@ const Publications = () => {
           <h3>Back-propagation with TensorFlow</h3>
           <p><strong>GeeksForGeeks</strong>, Oct 12, 2023</p>
           <p>This article discusses how <a href="https://www.geeksforgeeks.org/back-propagation-with-tensorflow/">backpropagation</a> works in TensorFlow, one of the most popular deep-learning libraries.</p>
+        </div>
+        <div className="publication">
+          <h3>OpenCV: Image Processing</h3>
+          <p><strong>Medium</strong>, July 29, 2023</p>
+          <p><a href="https://medium.com/@anviver2005/opencv-image-processing-ca2b5186589e">OpenCV</a> stands for Open-source Computer Vision, which is made available by Berkely Software Distribution license. It is basically a group of algorithms inspired by human brain that learn using large number of datasets so as to clone the human instincts.</p>
         </div>
       </div>
     </section>
