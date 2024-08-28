@@ -8,53 +8,162 @@
   background-color: #f0f0f0;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+}
+
+.volunteering:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+  margin-right: 100px;
+}
+
+.volunteering h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: end;
+}
+
+.volunteering hr {
+  margin-bottom: 20px;
+}
+
+.volunteer-role {
+  margin-bottom: 20px;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.role-info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1rem;
+}
+
+.role-info .role-place, .role-info .role-duration {
+  margin: 0;
+}
+
+.volunteer-role p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .volunteering {
+    margin: 30px;
+    margin-left: 200px;
+    margin-bottom: 60px;
+    padding: 15px;
+    padding-bottom: 50px;
   }
 
-  .volunteering:hover{
-    background-color: #e0e0e0;
-    transform: scale(1.1);
-    margin-right: 100px;
+  .volunteering:hover {
+    margin-right: 70px;
   }
-  
+
   .volunteering h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: end;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: start;
   }
-  
-  .volunteering hr {
-    margin-bottom: 20px;
-  }
-  
-  .volunteer-role {
-    margin-bottom: 20px;
-  }
-  
-  .role-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+
   .role-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  
+
   .role-info {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 1rem;
+    padding: 20px;
+    font-size: 0.9rem;
   }
-  
-  .role-info .role-place, .role-info .role-duration {
-    margin: 0;
-  }
-  
+
   .volunteer-role p {
-    margin-top: 10px;
-    font-size: 1rem;
-    text-align: justify;
+    font-size: 0.9rem;
   }
+}
+
+@media (max-width: 768px) {
+  .volunteering {
+    margin: 20px;
+    margin-left: 0;
+    margin-bottom: 40px;
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  .volunteering:hover {
+    margin-right: 40px;
+  }
+
+  .volunteering h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+
+  .role-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .role-info {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+
+  .volunteer-role p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .volunteering {
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-bottom: 30px;
+  }
+
+  .volunteering:hover {
+    margin-right: 20px;
+  }
+
+  .volunteering h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+
+  .role-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-header h3 {
+    font-size: 1rem;
+  }
+
+  .role-info {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  .volunteer-role p {
+    font-size: 0.7rem;
+  }
+}

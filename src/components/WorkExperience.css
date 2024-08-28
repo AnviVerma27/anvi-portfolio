@@ -61,3 +61,95 @@
   margin-bottom: 10px;
   line-height: 1.6;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section {
+    margin: 50px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .experience-box {
+    width: 350px; /* Adjust width for tablets */
+    padding: 15px;
+  }
+
+  .experience-title {
+    font-size: 1.4rem;
+  }
+
+  .experience-date {
+    font-size: 0.8rem;
+  }
+
+  .experience-box ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 30px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-box {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+    padding: 10px;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+  }
+
+  .experience-date {
+    font-size: 0.7rem;
+  }
+
+  .experience-box ul li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .experience-box {
+    width: 100%; /* Full width on mobile screens */
+    max-width: none;
+    padding: 5px;
+  }
+
+  .experience-title {
+    font-size: 1rem;
+  }
+
+  .experience-date {
+    font-size: 0.6rem;
+  }
+
+  .experience-box ul li {
+    font-size: 0.7rem;
+  }
+}

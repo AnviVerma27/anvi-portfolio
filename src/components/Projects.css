@@ -55,3 +55,80 @@
   margin-bottom: 10px;
   line-height: 1.6;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-section {
+    margin: 50px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .project-box {
+    width: 300px; /* Adjusted width for smaller screens */
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-box ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    margin: 40px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .project-box {
+    width: 250px; /* Further adjusted width for smaller screens */
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-box ul li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .project-box {
+    width: 100%; /* Full-width boxes for mobile screens */
+    margin: 10px 0; /* Adjusted margins */
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-box ul li {
+    font-size: 0.7rem;
+  }
+}

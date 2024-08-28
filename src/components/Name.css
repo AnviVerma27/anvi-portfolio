@@ -1,5 +1,6 @@
-.box{
-    display: flex;    
+.box {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap in case they don't fit in one row */
 }
 
 .text-section {
@@ -13,7 +14,35 @@
     height: 400px;
     text-align: center;
     color: white;
-    font-size:xx-large;
+    font-size: xx-large;
     border-radius: 1%;
-    animation: fadeInDown 0.7s  ease-in;
+    animation: fadeInDown 0.7s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .text-section {
+        height: 300px;
+        font-size: x-large;
+        padding: 30px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        height: 250px;
+        font-size: large;
+        padding: 20px;
+        margin: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section {
+        height: 200px;
+        font-size: medium;
+        padding: 15px;
+        margin: 10px;
+    }
 }

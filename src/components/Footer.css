@@ -2,30 +2,66 @@
 /* Keep the existing styles for body and other sections */
 
 .footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #61dafb;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+      padding: 15px 0;
   }
-  
+
   .footer p {
-    margin: 0;
-    font-size: 0.9rem;
+      font-size: 0.85rem;
   }
-  
+
   .social-icons {
-    margin-top: 10px;
+      margin-top: 15px;
   }
-  
+
   .social-icons a {
-    color: #ffffff;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+      margin: 0 8px;
   }
-  
-  .social-icons a:hover {
-    color: #61dafb;
-    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 10px 0;
   }
-  
+
+  .footer p {
+      font-size: 0.8rem;
+  }
+
+  .social-icons {
+      margin-top: 10px;
+  }
+
+  .social-icons a {
+      margin: 0 6px;
+  }
+}

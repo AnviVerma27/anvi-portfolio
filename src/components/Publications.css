@@ -1,36 +1,99 @@
 /* Publications.css */
 .publications {
-    padding: 50px 0;
-    background-color: #fff;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.publications h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.publication {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: x-large;
+}
+
+.publication h3 {
+  margin-bottom: 10px;
+}
+
+.publication p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.publication a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .publications {
+      padding: 40px 0;
   }
-  
+
   .publications h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+      font-size: 2rem;
+      margin-bottom: 15px;
   }
-  
+
   .publication {
-    margin-bottom: 30px;
-    margin-top: 50px;
-    font-size: x-large;
+      margin-bottom: 25px;
+      margin-top: 40px;
+      font-size: large;
   }
-  
-  .publication h3 {
-    margin-bottom: 10px;
-  }
-  
+
   .publication p {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+      font-size: 1rem;
   }
-  
-  .publication a {
-    color: #61dafb;
-    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .publications {
+      padding: 30px 0;
   }
-  
-  .publication a:hover {
-    text-decoration: underline;
+
+  .publications h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
   }
-  
+
+  .publication {
+      margin-bottom: 20px;
+      margin-top: 30px;
+      font-size: medium;
+  }
+
+  .publication p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .publications {
+      padding: 20px 0;
+  }
+
+  .publications h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+
+  .publication {
+      margin-bottom: 15px;
+      margin-top: 20px;
+      font-size: medium;
+  }
+
+  .publication p {
+      font-size: 0.8rem;
+  }
+}
