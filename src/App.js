@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
 import { portfolioData } from './data/portfolioData';
-import { HeroScene, ProjectScene } from './components/SpatialScene';
+import { HeroScene, LaptopJourney } from './components/SpatialScene';
 import './App.css';
 
 const icons = { github: FiGithub, linkedin: FiLinkedin, email: FiMail };
@@ -11,8 +11,11 @@ function SectionHeading({ eyebrow, title, count }) {
 }
 
 function App() {
+  const { person, navigation, projects, experience, skills, publications, community } = portfolioData;
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
+  const [projectProgress, setProjectProgress] = useState(0);
+  const workRef = useRef(null);
 
   useEffect(() => {
     const items = document.querySelectorAll('.reveal');
@@ -24,6 +27,21 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const updateJourney = () => {
+      if (!workRef.current) return;
+      const rect = workRef.current.getBoundingClientRect();
+      const travel = Math.max(1, rect.height - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / travel));
+      setProjectProgress(progress);
+      setActiveProject(Math.min(projects.length - 1, Math.floor(progress * projects.length)));
+    };
+    updateJourney();
+    window.addEventListener('scroll', updateJourney, { passive: true });
+    window.addEventListener('resize', updateJourney);
+    return () => { window.removeEventListener('scroll', updateJourney); window.removeEventListener('resize', updateJourney); };
+  }, [projects.length]);
+
+  useEffect(() => {
     const move = (event) => {
       document.documentElement.style.setProperty('--mx', `${(event.clientX / window.innerWidth - .5) * 12}deg`);
       document.documentElement.style.setProperty('--my', `${(event.clientY / window.innerHeight - .5) * -12}deg`);
@@ -31,8 +49,6 @@ function App() {
     window.addEventListener('pointermove', move);
     return () => window.removeEventListener('pointermove', move);
   }, []);
-
-  const { person, navigation, projects, experience, skills, publications, community } = portfolioData;
 
   return (
     <main>
@@ -50,8 +66,9 @@ function App() {
         <div className="scene-vignette" />
         <div className="hero-copy">
           <div className="status-pill"><i /> NEURAL OBSERVATORY ONLINE</div>
-          <p className="kicker">ANVI VERMA · AI / ML ENGINEER</p>
-          <h1>Building<br /><em>intelligence</em><br />you can use.</h1>
+          <p className="kicker">PERSONAL PORTFOLIO · AI / ML ENGINEER</p>
+          <h1 className="hero-name">Anvi <em>Verma.</em></h1>
+          <h2 className="hero-statement">Building intelligence<br />you can use.</h2>
           <p className="hero-intro">{person.intro}</p>
           <div className="hero-actions">
             <a className="primary-button" href="#work">Explore my work <FiArrowUpRight /></a>
@@ -78,17 +95,19 @@ function App() {
         </div>
       </section>
 
-      <section id="work" className="work-section">
-        <SectionHeading eyebrow="02 — SELECTED BUILDS" title="Ideas, made tangible." count={`0${projects.length}`} />
-        <div className="project-stage reveal">
-          <div className={`project-visual visual-${activeProject + 1}`}><div className="visual-grid" /><span className="project-number">LIVE CASE / 0{activeProject + 1}</span><ProjectScene variant={activeProject} /><div className="project-scan"><span>{projects[activeProject].type}</span><b>ACTIVE</b></div></div>
-          <article className="project-detail">
-            <span>{projects[activeProject].type} · {projects[activeProject].year}</span><h3>{projects[activeProject].title}</h3><p>{projects[activeProject].description}</p>
-            <div className="tag-row">{projects[activeProject].tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-            <a href={projects[activeProject].url} target="_blank" rel="noreferrer">View project <FiArrowUpRight /></a>
-          </article>
+      <section id="work" className="work-section" ref={workRef}>
+        <div className="work-sticky">
+          <div className="journey-heading"><span>02 — SELECTED BUILDS</span><b>SCROLL TO RUN THE MACHINE ↓</b></div>
+          <div className="laptop-scene"><LaptopJourney progress={projectProgress} activeProject={activeProject} project={projects[activeProject]} /><div className="machine-hud"><span>ANVI.OS / LIVE RUNTIME</span><i /><span>PROJECT 0{activeProject + 1}</span></div></div>
+          <div className="project-story">
+            {projects.map((project, index) => <article className={`story-card ${activeProject === index ? 'active' : ''}`} key={project.title}>
+              <span>0{index + 1} / {project.type}</span><h2>{project.title}</h2><p>{project.description}</p>
+              <div className="tag-row">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+              <a href={project.url} target="_blank" rel="noreferrer">Open case study <FiArrowUpRight /></a>
+            </article>)}
+          </div>
+          <div className="journey-progress"><i style={{ height: `${projectProgress * 100}%` }} />{projects.map((_, index) => <span className={activeProject >= index ? 'passed' : ''} key={index} />)}</div>
         </div>
-        <div className="project-picker">{projects.map((project, index) => <button className={activeProject === index ? 'active' : ''} onClick={() => setActiveProject(index)} key={project.title}><span>0{index + 1}</span>{project.title}</button>)}</div>
       </section>
 
       <section id="experience" className="experience-section">
