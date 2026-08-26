@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { portfolioData } from './data/portfolioData';
 import { HeroScene, LaptopJourney } from './components/SpatialScene';
 import './App.css';
@@ -127,6 +128,7 @@ function App() {
       </section>
 
       <footer><div><p>Have a difficult problem?</p><h2>Let’s make it<br /><em>beautifully simple.</em></h2><a href={`mailto:${person.email}`}>{person.email} <FiArrowUpRight /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} ANVI VERMA</span><div>{person.socials.map(item => { const Icon = icons[item.icon]; return <a key={item.label} href={item.url} target="_blank" rel="noreferrer" aria-label={item.label}><Icon /> {item.label}</a>; })}</div><a href="#top">BACK TO TOP ↑</a></div></footer>
+      <SpeedInsights />
     </main>
   );
 }
